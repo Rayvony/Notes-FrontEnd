@@ -26,11 +26,11 @@ export const NavBar = () => {
   return (
     <>
       <AppBar position='static' className={styles.appBar}>
-        <Toolbar className={styles.toolBar}>
+        <Toolbar>
           <img src='/Firma.svg' alt='logo' className={styles.logo} />
-
+          <div className={styles.spacer} />
           <img src='/Notes_Logo.png' alt='notes' className={styles.notes} />
-
+          <div className={styles.spacer} />
           {status === "authenticated" ? (
             <>
               <Typography variant='h6' color='inherit' className={styles.username}>
