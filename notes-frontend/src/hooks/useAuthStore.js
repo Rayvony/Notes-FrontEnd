@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { noteAPI } from "../api/noteAPI";
 import { onLogin, onLogout } from "../store/authSlice";
+import Cookies from "js-cookie";
 
 export const useAuthStore = () => {
   const dispatch = useDispatch();
@@ -12,6 +13,7 @@ export const useAuthStore = () => {
         username,
         password,
       });
+      Cookies.set("user", JSON.stringify(data.user), { expires: 7 });
       dispatch(onLogin(data.user));
     } catch (error) {
       throw new Error("Wrong username or password");
@@ -19,7 +21,7 @@ export const useAuthStore = () => {
   };
 
   const logout = () => {
-    localStorage.removeItem("user");
+    Cookies.remove("user");
     dispatch(onLogout());
   };
 
