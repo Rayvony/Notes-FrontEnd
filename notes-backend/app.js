@@ -8,7 +8,7 @@ const usersRouter = require("./routes/users");
 const app = express();
 
 var corsOptions = {
-  origin: "https://notes-front-ridlyzcv1-rayvonys-projects.vercel.app",
+  origin: "https://notes-front-end-six.vercel.app",
   credentials: true,
   allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept", "Authorization"],
   methods: ["GET", "POST", "PUT", "DELETE", "UPDATE"],
