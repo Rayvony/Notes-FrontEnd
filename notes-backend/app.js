@@ -28,11 +28,6 @@ sequelize
     console.error("Database connection error:", err);
   });
 
-app.use((req, res, next) => {
-  console.log(res.getHeaders());
-  next();
-});
-
 app.use("/notes", notesRouter);
 app.use("/users", usersRouter);
 
