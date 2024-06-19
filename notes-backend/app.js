@@ -7,6 +7,8 @@ const usersRouter = require("./routes/users");
 
 const app = express();
 
+app.use(cors());
+
 app.use(function (req, res, next) {
   res.setHeader("Access-Control-Allow-Origin", "https://notes-front-ridlyzcv1-rayvonys-projects.vercel.app");
   res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
@@ -14,7 +16,6 @@ app.use(function (req, res, next) {
   res.setHeader("Access-Control-Allow-Methods", "GET, OPTIONS, POST, PUT, DELETE, UPDATE");
   next();
 });
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
