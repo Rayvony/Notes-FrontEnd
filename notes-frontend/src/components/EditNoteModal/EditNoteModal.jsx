@@ -58,7 +58,7 @@ const EditNoteModal = ({ open, handleClose, noteData, handleUpdateNote }) => {
                   label={cat}
                   onDelete={() => handleDeleteCategory(index)}
                   deleteIcon={
-                    <IconButton>
+                    <IconButton disableRipple>
                       <DeleteIcon />
                     </IconButton>
                   }

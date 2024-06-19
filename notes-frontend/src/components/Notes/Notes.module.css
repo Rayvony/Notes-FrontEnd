@@ -11,7 +11,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: box-shadow   0.1s linear !important;
+  transition: box-shadow 0.1s linear !important;
 }
 
 .addNote:hover {
@@ -26,17 +26,17 @@
   margin-bottom: 20px;
   padding: 10px;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   cursor: pointer;
   transition: box-shadow 0.1s, transform 0.2s !important;
 }
 
-.notesContainer > :nth-child(even){
-  background-color: #cfc ;
+.notesContainer > :nth-child(even) {
+  background-color: #cfc;
 }
 
 .notesContainer > :nth-child(3n) {
-  background-color: #ccf ;
+  background-color: #ccf;
 }
 
 .notesContainer > :nth-child(odd):hover {
@@ -62,7 +62,7 @@
 
 .content {
   word-wrap: break-word;
-  font-family: 'Reenie Beanie';
+  font-family: "Reenie Beanie";
   font-size: 2rem;
   line-height: 25px;
   transform: translateY(-30px);
@@ -95,11 +95,11 @@
   filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 1));
 }
 
-.buttons button:hover{
+.buttons button:hover {
   color: #fff;
 }
 
-.filterInput{
+.filterInput {
   background-color: #fff;
   border-radius: 4px;
 }

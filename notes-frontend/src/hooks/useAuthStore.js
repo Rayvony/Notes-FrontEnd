@@ -12,13 +12,14 @@ export const useAuthStore = () => {
         username,
         password,
       });
-      await dispatch(onLogin(data));
+      dispatch(onLogin(data.user));
     } catch (error) {
       console.log(error);
     }
   };
 
   const logout = () => {
+    localStorage.removeItem("user");
     dispatch(onLogout());
   };
 
@@ -28,7 +29,7 @@ export const useAuthStore = () => {
         username,
         password,
       });
-      dispatch(onLogin(data));
+      dispatch(onLogin(data.user));
     } catch (error) {
       console.log(error);
     }

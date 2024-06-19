@@ -6,6 +6,7 @@ import AddIcon from "@mui/icons-material/Add";
 import DeleteIcon from "@mui/icons-material/Delete";
 import ArchiveIcon from "@mui/icons-material/Archive";
 import UnarchiveIcon from "@mui/icons-material/Unarchive";
+import EditIcon from "@mui/icons-material/Edit";
 import CreateNoteModal from "../CreateNoteModal/CreateNoteModal";
 import EditNoteModal from "../EditNoteModal/EditNoteModal";
 import LoginModal from "../LoginModal/LoginModal";
@@ -109,6 +110,7 @@ const Notes = () => {
               <Paper key={note.id} elevation={3} className={styles.stickyNote} onClick={() => openEditNoteModal(note)} sx={{ backgroundColor: "#ffc" }}>
                 <div className={styles.buttons}>
                   <IconButton
+                    disableRipple
                     onClick={(e) => {
                       e.stopPropagation();
                       handleArchiveToggle(note.id);
@@ -117,6 +119,7 @@ const Notes = () => {
                     {note.archived ? <UnarchiveIcon /> : <ArchiveIcon />}
                   </IconButton>
                   <IconButton
+                    disableRipple
                     onClick={(e) => {
                       e.stopPropagation();
                       handleDeleteNote(note.id);
