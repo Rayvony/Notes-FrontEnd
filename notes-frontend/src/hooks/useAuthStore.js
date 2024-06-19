@@ -14,7 +14,7 @@ export const useAuthStore = () => {
       });
       dispatch(onLogin(data.user));
     } catch (error) {
-      console.log(error);
+      throw new Error("Wrong username or password");
     }
   };
 
@@ -31,7 +31,7 @@ export const useAuthStore = () => {
       });
       dispatch(onLogin(data.user));
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   };
 

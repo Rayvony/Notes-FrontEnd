@@ -1,4 +1,4 @@
-import { Modal, Paper, Button } from "@mui/material";
+import { Modal, Paper, Button, Typography } from "@mui/material";
 import styles from "./DeleteConfirmationModal.module.css";
 
 const DeleteConfirmationModal = ({ open, handleClose, handleConfirmDelete }) => {
@@ -6,7 +6,7 @@ const DeleteConfirmationModal = ({ open, handleClose, handleConfirmDelete }) => 
     <Modal open={open} onClose={handleClose}>
       <div className={styles.modal}>
         <Paper elevation={3} className={styles.paper}>
-          <h2>Are you sure you want to delete this note?</h2>
+          <Typography variant='h6'>Are you sure you want to delete this note?</Typography>
           <div className={styles.buttons}>
             <Button color='purple' onClick={handleClose}>
               Cancel

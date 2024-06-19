@@ -50,7 +50,7 @@ const CreateNoteModal = ({ open, handleClose, handleCreateNote }) => {
                   label={cat}
                   onDelete={() => handleDeleteCategory(index)}
                   deleteIcon={
-                    <IconButton>
+                    <IconButton disableRipple>
                       <DeleteIcon />
                     </IconButton>
                   }
