@@ -1,5 +1,6 @@
 import Navbar from "./components/NavBar/NavBar";
 import Notes from "./components/Notes/Notes";
+import Footer from "./components/Footer/Footer";
 import { useEffect } from "react";
 import { onLogin } from "./store/authSlice";
 import Cookies from "js-cookie";
@@ -17,6 +18,7 @@ function App() {
     <>
       <Navbar />
       <Notes />
+      <Footer />
     </>
   );
 }
