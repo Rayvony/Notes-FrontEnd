@@ -26,7 +26,7 @@
 .notes {
   height: 65px;
   width: auto;
-  position: relative;
+  position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
